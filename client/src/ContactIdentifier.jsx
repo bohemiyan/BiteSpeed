@@ -10,6 +10,7 @@ const ContactIdentifier = () => {
     const [loading, setLoading] = useState(false);
     const [response, setResponse] = useState(null);
     const [error, setError] = useState(null);
+    const url = 'http://localhost:3000/identify';
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -22,7 +23,7 @@ const ContactIdentifier = () => {
         setResponse(null);
         try {
             console.log('Submitting form data:', formData);
-            const result = await axios.post('http://localhost:3000/identify', formData, {
+            const result = await axios.post(url, formData, {
                 headers: { 'Content-Type': 'application/json' }
             });
 
@@ -206,7 +207,7 @@ const ContactIdentifier = () => {
                                                 Request Details
                                             </summary>
                                             <div className="mt-2 bg-red-100 p-3 rounded-lg text-xs text-red-800">
-                                                <p><strong>URL:</strong> http://localhost:3000/identify</p>
+                                                <p><strong>URL:</strong> {url}</p>
                                                 <p><strong>Method:</strong> POST</p>
                                                 <p><strong>Headers:</strong> Content-Type: application/json</p>
                                                 <p><strong>Body:</strong></p>
@@ -227,7 +228,7 @@ const ContactIdentifier = () => {
                         <div className="flex">
                             <span className="font-medium text-gray-600 w-24">URL:</span>
                             <code className="bg-gray-100 px-2 py-1 rounded text-gray-800">
-                                http://localhost:3000/identify
+                                {url}
                             </code>
                         </div>
                         <div className="flex">
