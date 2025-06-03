@@ -13,7 +13,7 @@ This project implements the **Identity Reconciliation Backend Task** for Bitespe
 
 ## 🖼️ Sample UI
 
-<img src="https://user-images.githubusercontent.com/yourusername/bitespeed-sample.png" alt="Contact Identifier Sample UI" style="max-width: 100%; border-radius: 8px;" />
+![Sample UI](./sample.png)
 
 ---
 
