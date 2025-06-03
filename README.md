@@ -11,6 +11,12 @@ This project implements the **Identity Reconciliation Backend Task** for Bitespe
 
 ---
 
+## 🖼️ Sample UI
+
+<img src="https://user-images.githubusercontent.com/yourusername/bitespeed-sample.png" alt="Contact Identifier Sample UI" style="max-width: 100%; border-radius: 8px;" />
+
+---
+
 ## 📁 Project Structure
 
 ```
@@ -28,7 +34,7 @@ This project implements the **Identity Reconciliation Backend Task** for Bitespe
 ├── src/
 │   ├── db.js               # Knex instance (rename from db.js.js)
 │   └── routes/
-│       └── identity.js     # /identify route handler
+│       └── identity.js     # /identify route 
 └── postman.json            # Postman collection
 
 ````
