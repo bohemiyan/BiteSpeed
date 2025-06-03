@@ -10,7 +10,8 @@ const ContactIdentifier = () => {
     const [loading, setLoading] = useState(false);
     const [response, setResponse] = useState(null);
     const [error, setError] = useState(null);
-    const url = 'http://localhost:3000/identify';
+    // const url = 'http://localhost:3000/identify';
+    const url = "/identify";
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
