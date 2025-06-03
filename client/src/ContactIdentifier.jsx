@@ -11,7 +11,7 @@ const ContactIdentifier = () => {
     const [response, setResponse] = useState(null);
     const [error, setError] = useState(null);
     // const url = 'http://localhost:3000/identify';
-    const url = "https://bitespeed.dopum.in/identify";
+    const url = "https://apps.dopum.in/identify";
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
