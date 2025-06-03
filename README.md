@@ -40,6 +40,15 @@ This project implements the **Identity Reconciliation Backend Task** for Bitespe
 ````
 
 ---
+## 🌐 Live App
+
+The app is served at:  
+**[https://apps.dopum.in/bitespeed](https://apps.dopum.in/bitespeed)**
+
+To test the API endpoint, use:  
+**POST [https://apps.dopum.in/bitespeed/identify](https://apps.dopum.in/bitespeed/identify)**
+
+---
 
 ## 🧪 API Endpoint
 
