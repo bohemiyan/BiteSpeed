@@ -1,0 +1,37 @@
+{
+  "info": {
+    "name": "BiteSpeed API",
+    "description": "Postman collection for BiteSpeed identity API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Identify Contact",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"primary0@example.com\",\n  \"phoneNumber\": \"900000000\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/identify",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "identify"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "bitespeed",
+  "version": "1.0.0",
+  "description": "Assigment",
+  "main": "index.js",
+  "scripts": {
+    "pm2": "pm2 start index.js --name bitespeed",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "knex migrate:latest",
+    "migrate:rollback": "knex migrate:rollback",
+    "seed": "knex seed:run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bohemiyan/BiteSpeed.git"
+  },
+  "author": "chirag",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bohemiyan/BiteSpeed/issues"
+  },
+  "homepage": "https://github.com/bohemiyan/BiteSpeed#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "knex": "^3.1.0",
+    "nodemon": "^3.1.10",
+    "pg": "^8.16.0"
+  }
+}
