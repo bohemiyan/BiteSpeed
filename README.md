@@ -1,6 +1,3 @@
-Here is your `README.md` file in raw **Markdown format** ready to be saved as `README.md`:
-
-```md
 # Bitespeed Identity Reconciliation
 
 This project implements the **Identity Reconciliation Backend Task** for Bitespeed. The goal is to track and unify customer identities using their `email` and `phoneNumber`.
@@ -19,15 +16,20 @@ This project implements the **Identity Reconciliation Backend Task** for Bitespe
 ```
 
 .
-├── index.js                  # Main server entry point
-├── knexfile.js              # Knex configuration
-├── migrations/              # Database schema migrations
-├── seeds/                   # Dummy data seed files
-├── .env                     # Environment variables
-└── src/
-├── db.js                # Knex instance
-└── routes/
-└── identify.js      # /identify route handler
+├── index.js                # Main server entry point
+├── knexfile.js             # Knex configuration
+├── .env                    # Environment variables
+├── package.json
+├── README.md
+├── migrations/             # Database schema migrations
+│   └── 20250604000000_create_contacts.js
+├── seeds/                  # Dummy data seed files
+│   └── 01_dummy_contacts.js
+├── src/
+│   ├── db.js               # Knex instance (rename from db.js.js)
+│   └── routes/
+│       └── identity.js     # /identify route handler
+└── postman.json            # Postman collection
 
 ````
 
@@ -124,7 +126,5 @@ Run the seed to insert **50 dummy records** (10 primary, 40 secondary) into the 
 ## ✨ Credits
 
 This solution was built by **Chirag** for the Bitespeed Backend Task using clean architectural practices and PostgreSQL.
-
-```
 
 
