@@ -143,3 +143,6 @@ Run the seed to insert **50 dummy records** (10 primary, 40 secondary) into the 
 This solution was built by **Chirag** for the Bitespeed Backend Task using clean architectural practices and PostgreSQL.
 
 
+## More about **Chirag**
+**[https://www.dopum.in](https://www.dopum.in)**
+
