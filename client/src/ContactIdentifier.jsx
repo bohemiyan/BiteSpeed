@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send, User, Phone, Mail, CheckCircle, XCircle, Loader } from 'lucide-react';
+import { Send, User, Phone, Mail, CheckCircle, XCircle, Loader, Github, Globe } from 'lucide-react';
 import axios from 'axios';
 
 const ContactIdentifier = () => {
@@ -10,7 +10,6 @@ const ContactIdentifier = () => {
     const [loading, setLoading] = useState(false);
     const [response, setResponse] = useState(null);
     const [error, setError] = useState(null);
-    // const url = 'http://localhost:3000/identify';
     const url = "https://apps.dopum.in/identify";
 
     const handleInputChange = (e) => {
@@ -73,7 +72,7 @@ const ContactIdentifier = () => {
                                         name="email"
                                         value={formData.email}
                                         onChange={handleInputChange}
-                                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+                                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 transition-all duration-200"
                                         placeholder="Enter email address"
                                         required
                                     />
@@ -89,7 +88,7 @@ const ContactIdentifier = () => {
                                         name="phoneNumber"
                                         value={formData.phoneNumber}
                                         onChange={handleInputChange}
-                                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+                                        className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 transition-all duration-200"
                                         placeholder="Enter phone number"
                                         required
                                     />
@@ -122,7 +121,7 @@ const ContactIdentifier = () => {
                                     <h3 className="text-lg font-semibold text-gray-800">API Response</h3>
                                     <button
                                         onClick={clearResults}
-                                        className="text-gray-500 hover:text-gray-700 text-sm font-medium"
+                                        className="text-gray-500 hover:text-gray-700 text-sm font-medium transition-colors duration-200"
                                     >
                                         Clear
                                     </button>
@@ -184,7 +183,7 @@ const ContactIdentifier = () => {
 
                                         {/* Raw JSON */}
                                         <details className="mt-6">
-                                            <summary className="cursor-pointer text-green-700 font-semibold text-sm">
+                                            <summary className="cursor-pointer text-green-700 font-semibold text-sm hover:text-green-800 transition-colors duration-200">
                                                 View Raw Response
                                             </summary>
                                             <pre className="mt-2 bg-green-100 p-3 rounded-lg text-xs text-green-800 overflow-x-auto">
@@ -194,8 +193,6 @@ const ContactIdentifier = () => {
                                     </div>
                                 )}
 
-
-
                                 {error && (
                                     <div className="bg-red-50 border border-red-200 rounded-xl p-6">
                                         <div className="flex items-center mb-3">
@@ -204,7 +201,7 @@ const ContactIdentifier = () => {
                                         </div>
                                         <p className="text-red-700 text-sm mb-3">{error}</p>
                                         <details>
-                                            <summary className="cursor-pointer text-red-700 font-medium text-sm">
+                                            <summary className="cursor-pointer text-red-700 font-medium text-sm hover:text-red-800 transition-colors duration-200">
                                                 Request Details
                                             </summary>
                                             <div className="mt-2 bg-red-100 p-3 rounded-lg text-xs text-red-800">
@@ -226,21 +223,45 @@ const ContactIdentifier = () => {
                 <div className="mt-8 bg-white rounded-2xl shadow-lg border border-gray-100 p-6">
                     <h3 className="text-lg font-semibold text-gray-800 mb-4">API Endpoint Information</h3>
                     <div className="space-y-3 text-sm">
-                        <div className="flex">
+                        <div className="flex items-center">
                             <span className="font-medium text-gray-600 w-24">URL:</span>
                             <code className="bg-gray-100 px-2 py-1 rounded text-gray-800">
                                 {url}
                             </code>
                         </div>
-                        <div className="flex">
+                        <div className="flex items-center">
                             <span className="font-medium text-gray-600 w-24">Method:</span>
                             <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded font-mono text-xs">POST</span>
                         </div>
-                        <div className="flex">
+                        <div className="flex items-center">
                             <span className="font-medium text-gray-600 w-24">Headers:</span>
                             <code className="bg-gray-100 px-2 py-1 rounded text-gray-800">
                                 Content-Type: application/json
                             </code>
+                        </div>
+                        <div className="flex items-center">
+                            <span className="font-medium text-gray-600 w-24">Repository:</span>
+                            <a
+                                href="https://github.com/bohemiyan/BiteSpeed"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
+                            >
+                                <Github className="w-4 h-4 mr-2" />
+                                GitHub Repository
+                            </a>
+                        </div>
+                        <div className="flex items-center">
+                            <span className="font-medium text-gray-600 w-24">Portfolio:</span>
+                            <a
+                                href="https://www.dopum.in"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
+                            >
+                                <Globe className="w-4 h-4 mr-2" />
+                                Chirag's Portfolio
+                            </a>
                         </div>
                     </div>
                 </div>
